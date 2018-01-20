@@ -18,7 +18,7 @@ Asymmetric encryption and signing algorithm: OAEP RSA algorithm (I used key size
 - RSA encrypts and signs data using OAEP which is different from textbook RSA.
 - Key size of 2048 is considered to be secure and unbroken
 
--Hash Algorithm: SHA256 algorithm is relatively secure
+- Hash Algorithm: SHA256 algorithm is relatively secure
 
 # Usage: Encryption
       python fcrypt.py destination_public_key.der sender_private_key.pem input_plaintext encrypted_text
