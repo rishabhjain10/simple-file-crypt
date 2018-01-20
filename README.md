@@ -3,10 +3,10 @@ Simple file encryption and decryption module for python 2.7 and provides confide
 
 # Protocol
 simple-file-crypt uses sign-encrypt-sign method to secure file ecnryption and decryption.
-      1) It signs the hash(M) and generates 256-bit key(Ks) for AES-GCM encryption.
-      2) It encrypts [M || hash(M)] using AES-GCM mode. I also authenticate the hash(M) using authentication mode in GCM.
-      3) Next, it encrypts symmetric key (Ks) with public key of receiver and sign the encrypted symmetric key with sender’s private key.
-      4) Lastly it checks the hash of decrypted file thus verifying successful decryption.
+      - It signs the hash(M) and generates 256-bit key(Ks) for AES-GCM encryption.
+      - It encrypts [M || hash(M)] using AES-GCM mode. I also authenticate the hash(M) using authentication mode in GCM.
+      - Next, it encrypts symmetric key (Ks) with public key of receiver and sign the encrypted symmetric key with sender’s private key.
+      - Lastly it checks the hash of decrypted file thus verifying successful decryption.
 
 # Algorithm
 Symmetric encryption algorithm: AES-GCM-256 which uses 256-bit key. Why AES-GCM mode? Because:
